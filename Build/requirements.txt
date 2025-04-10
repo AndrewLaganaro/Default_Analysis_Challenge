@@ -1,0 +1,13 @@
+pandas
+seaborn
+numpy
+matplotlib
+scipy
+scikit-learn
+inflection
+requests
+tabulate
+loguru
+ipython
+boruta
+xgboost
