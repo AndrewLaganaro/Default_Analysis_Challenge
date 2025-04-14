@@ -21,7 +21,7 @@ def env_exists(env_path):
 def notebook_setup():
     
     print(f"\n|| Set the environment \"Python\ds-challenge\" as the kernel for Jupyter Notebook")
-    print("|| Use the folder \"Python\" from this repository")
+    print("|| Use the folder \"Python\" from this repository\n")
 
 
 def create_env(env_name='ds-challenge', build_dir='Build', python_dir='Python'):

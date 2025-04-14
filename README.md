@@ -1,6 +1,17 @@
-# Default Analysis Challenge
+# Default Analysis Challenge X-Health
 
 Bem-vindo ao repositório do projeto Default Analysis Challenge! Este documento explica como configurar o ambiente e fornece uma visão geral da estrutura do projeto.
+
+---
+<p align="center">
+  <img src="Assets/Images/X-Health.png" alt="Logo" width="300"/>
+</p>
+
+---
+
+### Mapa do Projeto 
+
+Consulte o arquivo `Project_Map.md` na raiz para um mapa detalhado da estrutura de pastas e arquivos. Ele serve como guia para navegação fácil pelo repositório.
 
 ---
 
@@ -68,18 +79,17 @@ Uma visão geral das pastas principais e seu conteúdo:
         - `Refined`: Dados processados e limpos
         - `Training`: Dados preparados para treinamento.
 
-- **`Data_Science`**  
+- **`Models`**  
     - Contém os recursos de modelagem e predição de ciência de dados:  
-        - `Encoders`: Codificadores
-        - `Models`: Modelos de machine learning
+        - `Deploy`: Modelos para deploy em produção.
+        - `Dev`: Modelos para desenvolvimento e testes.
 
 - **`Modules`**  
     - Módulos Python reutilizáveis:  
         - `Api.py`: Funcionalidades de API.  
         - `Tables.py`: Manipulação de tabelas.  
-        - `Train.py`: Treinamento de modelos.
+        - `Training.py`: Treinamento de modelos.
         - `Predict.py`: Predição de novos resultados.
-        - `Graphs.py`: Visualizações e gráficos.
 
 - **`Python`**  
     - Pasta onde o ambiente virtual `ds-challenge` é criado.
@@ -89,29 +99,56 @@ Uma visão geral das pastas principais e seu conteúdo:
     - Contém o script de configuração:  
         - `Project_setup.py`: Script principal para setup do ambiente.
 
+- **`Test`**  
+    - Possui um Json de exemplo para testar o modelo em produção:  
+        - `deploy_test.json`: Exemplo de entrada para o modelo.
+        
 ---
 
 ### Notebooks do Desafio
 
-Na raiz do projeto, temos quatro notebooks:
+Na raiz do projeto, temos três notebooks:
 
 1. **`Analise_Exploratoria_dos_Dados.ipynb`**  
     - Realiza a análise exploratória inicial dos dados, com visualizações e insights.
 
-2. **`Modelagem_Ciencia_de_Dados.ipynb`**  
+2. **`Default_Analysis_Challenge.ipynb`** 
     - Contém o processo de modelagem, incluindo pré-processamento, treinamento e avaliação dos modelos.
+    - Contém todas as etapas do projeto, desde a análise exploratória até a modelagem e testes. 
+    - Ele foi criado inicialmente, e então dividido em três partes conforme o desafio pede nas especificações.
 
 3. **`Teste_do_Modelo.ipynb`**  
     - Dedicado a testes com novos valores e validação do modelo final.
 
-4. **`Default_Analysis_Challenge.ipynb`**  
-    - Contém todas as etapas do projeto, desde a análise exploratória até a modelagem e testes. 
-    - Ele foi criado inicialmente, e então dividido em três partes conforme o desafio pede nas especificações.
-
 > **Nota:** Os três primeiros podem ser usados independentemente, conforme o desafio exige.
 
----
 
-### Mapa do Projeto
+### Deploy:
 
-Consulte o arquivo `Project_Map.md` na raiz para um mapa detalhado da estrutura de pastas e arquivos. Ele serve como guia para navegação fácil pelo repositório.
+<p align="center">
+  <img src="Assets/Images/Banner.png" alt="Logo" width="900"/>
+</p>
+
+Na raiz do projeto, temos o arquivo:
+
+- **`Deploy.py`**:
+    - Contém o código para deploy do modelo em produção.
+    - Utiliza o módulo `Api.py`
+    - Tem validação do json de entrada
+    - É feito em **`Streamlit`**, uma biblioteca Python para criar aplicativos web interativos.
+
+Para executar o deploy, siga os passos:
+1. **Ative o ambiente virtual**:  
+   - No terminal, navegue até a pasta do ambiente virtual e ative-o.
+    - **Windows**: `cd Python/ds-challenge/Scripts && activate`
+        - Em caso de problemas, também pode tentar a alternativa: 
+        - Copie e cole o caminho direto para o script no Terminal: 
+            - > C:\ **<caminho absoluto do repositório>**\Python\ds-challenge\Scripts\Activate.ps1
+            - Assim, o ambiente virtual será ativado diretamente no terminal.
+    - **Linux/Mac**: `cd Python/ds-challenge/bin && source activate`
+
+
+2. **Execute o script de deploy**:  
+   - No terminal, execute o comando:  
+    - ```streamlit run Deploy.py```
+
