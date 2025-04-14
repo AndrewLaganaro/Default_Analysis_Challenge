@@ -123,7 +123,7 @@ Na raiz do projeto, temos três notebooks:
 > **Nota:** Os três primeiros podem ser usados independentemente, conforme o desafio exige.
 
 
-### Deploy:
+### Deploy
 
 <p align="center">
   <img src="Assets/Images/Banner.png" alt="Logo" width="900"/>
@@ -149,6 +149,6 @@ Para executar o deploy, siga os passos:
 
 
 2. **Execute o script de deploy**:  
-   - No terminal, execute o comando:  
+   - No terminal, execute o comando, **na pasta raíz do repositório**:  
     - ```streamlit run Deploy.py```
 
